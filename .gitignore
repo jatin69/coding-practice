@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# codeblock files
+*.cbp
+*.depend
+*.layout
+
+# Netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+
+*.xml
+*.properties
+*.mf
