@@ -1,0 +1,27 @@
+                Ranges of various data types using MACROS from limits.h and floats.h
+
+
+                    Data type                   MIN                         MAX
+        ---------------------------------------------------------------------------------------
+                       char :                  -128   to                    127
+                 short char :                  -128   to                    127
+              unsigned char :                     0   to                    255
+
+
+                  short int :                -32768   to                  32767
+         unsigned short int :                     0   to                  65535
+                        int :           -2147483648   to             2147483647
+               unsigned int :                     0   to             4294967295
+
+
+                   long int :           -2147483648   to             2147483647
+          unsigned long int :                     0   to             4294967295
+              long long int :  -9223372036854775808   to    9223372036854775807
+     unsigned long long int :                     0   to   18446744073709551615
+
+
+                      float :          1.17549e-038   to           3.40282e+038
+             negative float :         -1.17549e-038   to          -3.40282e+038
+                     double :          2.22507e-308   to           1.79769e+308
+            negative double :         -2.22507e-308   to           1.79769e+308
+

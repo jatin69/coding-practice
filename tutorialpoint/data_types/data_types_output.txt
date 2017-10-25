@@ -1,0 +1,63 @@
+# output
+
+#### System gcc : 5.1.0
+#### Ideone gcc : 6.3
+
+
+            >>>> Data types with sizes and Ranges
+
+                 >>>>> Integers
+
+                  short int : 2
+                      Range : -32768 to 32767
+
+         unsigned short int : 2
+                      Range : 65535
+
+                        int : 4
+                      Range : -2147483648 to 2147483647
+
+               unsigned int : 4
+                      Range : 4294967295
+        **IDEONE SAYS - Range : 18446744073709551615 **
+        _This is possibly a logic flaw, or maybe not._
+
+        _**Nevertheless**, This shows that using these are risky,
+         as they are version dependent even on the same comiler_
+
+                   long int : 4
+          unsigned long int : 4
+
+                **IDEONE SAYS -**
+                   long int : 8
+          unsigned long int : 8
+          _One more example of version difference_
+
+              long long int : 8
+     unsigned long long int : 8
+
+                 >>>>> Floating points
+
+                      float : 4
+             unsigned float : not allowed
+                short float : not allowed
+                 long float : not allowed
+
+               short double : not allowed
+            unsigned double : not allowed
+                     double : 8
+                long double : 16
+
+                 >>>>> Character
+
+                       char : 1
+                    wchar_t : 2
+      **IDEONE SAYS - wchar_t : 4 **
+
+                 >>>>> Bool
+
+                       bool : 1
+
+
+_In the light of above output and [Ideone output](https://ideone.com/2hFsNo), we can fairly conclude that
+it is safe to use ideone and trust its result in such cases, as most online compiler follow same norms._

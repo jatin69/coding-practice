@@ -1,0 +1,25 @@
+
+>>>> Integer of exactly 8 bits
+      Size in bytes : 1
+  printf identifier : d
+           Range is : -128  to  +127
+
+
+>>>> Integer of exactly 16 bits
+      Size in bytes : 2
+  printf identifier : d
+           Range is : -32768  to  +32767
+
+
+>>>> Integer of exactly 32 bits
+      Size in bytes : 4
+  printf identifier : d
+           Range is : -2147483648  to  +2147483647
+
+
+>>>> Integer of exactly 64 bits
+      Size in bytes : 8
+  printf identifier : lld
+           Range is : -9223372036854775808  to  +9223372036854775807
+
+
