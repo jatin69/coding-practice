@@ -1,4 +1,4 @@
-Basic data types in c++
+## Basic data types in c++
 
 1. data_types.cpp
 Basic data types, their sizes, and ranges of a few.
