@@ -1,3 +1,12 @@
+/*
+@author - Naveen Rohilla
+
+Objective : To display fibonacci series upto N
+
+Approach  :
+iterative approach - displays the element inside the loop
+*/
+
 #include<iostream>
 using namespace std;
 #define N 10
