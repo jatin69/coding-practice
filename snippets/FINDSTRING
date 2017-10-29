@@ -2,6 +2,15 @@
 #include<stdio.h>
 #include<string.h>
 using namespace std;
+/*
+@author - BHAGESH DHANKHER
+
+Objective : FIND A SUBSTRING IN A STRING
+
+Approach  :
+1. Taking the string to find, in str2 and main string in str1
+2. Using comparission
+*/
 
 int main( )
 {
