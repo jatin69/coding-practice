@@ -1,5 +1,4 @@
 # todo 
 
-- max-sum-without-adjacents-editorial
-- find-maximum-possible-stolen-value-houses
-
+- efficient O(1) count and parity 
+- type of array - gfg
