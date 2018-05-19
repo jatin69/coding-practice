@@ -1,12 +1,16 @@
 # Coding practice
 
-- Revision of cpp / DS / Algo 
+- Coding practice and Revision of DS / Algo 
 
-### References-
-- Tutorial point - cplusplus
-- geeks for geeks
+### References
+- Tutorial point cplusplus
+- Data structures by Mark Allen Weiss
 - hackerrank
+- hackerearth
+- codechef
+- GeeksforGeeks
 - Interviewbit
+- leetcode
 - CtCi
 
 
@@ -14,9 +18,3 @@
 
 - For Coding standard, refer [this resource](https://gist.github.com/lefticus/10191322).
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
-
-
-## Notes
-
-- Hackerrank python
-	+ To view the problem statement, [https://www.hackerrank.com/challenges/filename/problem]()
