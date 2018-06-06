@@ -28,11 +28,18 @@ unsigned int parity(unsigned x)
 {
 	// Method 3: 11 instructions - fastest
 
-	x = x ^ (x >> 1);  // Can be written as x ^= (x>>1);
-	x = x ^ (x >> 2);  // Can be written as x ^= (x>>2);
-	x = x ^ (x >> 4);  // Can be written as x ^= (x>>4);
-	x = x ^ (x >> 8);  // Can be written as x ^= (x>>8);
-	x = x ^ (x >> 16); // Can be written as x ^= (x>>16);
+	// alternate bundling formation : big to small
+	x = x ^ ( x >> 16 );
+	x = x ^ ( x >> 8 );
+	x = x ^ ( x >> 4 );
+	x = x ^  (x>>2);
+	x = x ^  (x>>1);
+
+	//	x = x ^ (x >> 1);  // Can be written as x ^= (x>>1);
+	//	x = x ^ (x >> 2);  // Can be written as x ^= (x>>2);
+	//	x = x ^ (x >> 4);  // Can be written as x ^= (x>>4);
+	//	x = x ^ (x >> 8);  // Can be written as x ^= (x>>8);
+	//	x = x ^ (x >> 16); // Can be written as x ^= (x>>16);
 
 	// the following instruction can be written as x &= 1;
 	x = x & 0x1; // The LSB is the parity bit
