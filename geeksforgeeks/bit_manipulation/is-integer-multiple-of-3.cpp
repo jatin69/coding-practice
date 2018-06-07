@@ -8,6 +8,7 @@
  *
  * follow up - https://practice.geeksforgeeks.org/problems/is-binary-number-multiple-of-3/0/
  * approach - following same approach, diff of set bits at odd and even places.
+ * worst case time complexity : O(logN) + O(log((logN)/2)) ===> O(logN) 
  */
 
 

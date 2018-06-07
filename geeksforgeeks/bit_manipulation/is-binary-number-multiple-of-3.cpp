@@ -11,6 +11,7 @@
  * approach - efficient method to check multiple of 3 is-
  * count set bits at odd place, count set bits at even places
  * if the difference of both is a multiple of 3, the number is also multiple of 3.
+ * more apt example - check if the given integer is a multiple of 3
  */
 
 

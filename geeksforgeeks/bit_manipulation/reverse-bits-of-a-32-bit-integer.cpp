@@ -50,7 +50,7 @@ void printBin(unsigned n)
 // simple method - order logN
 /*
 Loop through all the bits of an integer.
-If a bit at ith position is set in the i/p no. then set the bit at (NO_OF_BITS – 1) – i in o/p.
+If a bit at ith position is set in the i/p no. then set the bit at (NO_OF_BITS ï¿½ 1) ï¿½ i in o/p.
 Where NO_OF_BITS is number of bits present in the given number.
 */
 unsigned int simpleReverseBits(unsigned int num)
@@ -86,38 +86,6 @@ unsigned int standardReverseBits(unsigned int num)
     return reverse_num;
 }
 
-
-/*
-merge sort variant for 32 bit number
-needs to write separate constants for different bit numbers
-can't be generically applied to reversal of exact bits
-*/
-unsigned int MergeSortReverseBits(register unsigned int x)
-{
- // pair swap
- x = (((x & 0xaaaaaaaa) >> 1) | ((x & 0x55555555) << 1));
-
- // 2 bit group swaps
- x = (((x & 0xcccccccc) >> 2) | ((x & 0x33333333) << 2));
-
- // 4 bit group swaps
- x = (((x & 0xf0f0f0f0) >> 4) | ((x & 0x0f0f0f0f) << 4));
-
- // 8 bit group swaps
- x = (((x & 0xff00ff00) >> 8) | ((x & 0x00ff00ff) << 8));
-
- // 16 bit group swaps
- x = (((x & 0xffff0000) >> 16) | ((x & 0x0000ffff) << 16));
-
- return x;
-
-}
-
-
-// lookup table method
-// need to make a look up table to simply map values
-
-
 /* Perfect Method - order logN
 where n is the number and logN is the no of bits needed to represent N
 can be generically applied to reversal of exact bits
@@ -150,6 +118,37 @@ unsigned int nBitReverseBits(unsigned int n)
     // required number
     return rev;
 }
+
+
+/*
+merge sort variant for 32 bit number
+needs to write separate constants for different bit numbers
+can't be generically applied to reversal of exact bits
+*/
+unsigned int MergeSortReverseBits(register unsigned int x)
+{
+ // pair swap
+ x = (((x & 0xaaaaaaaa) >> 1) | ((x & 0x55555555) << 1));
+
+ // 2 bit group swaps
+ x = (((x & 0xcccccccc) >> 2) | ((x & 0x33333333) << 2));
+
+ // 4 bit group swaps
+ x = (((x & 0xf0f0f0f0) >> 4) | ((x & 0x0f0f0f0f) << 4));
+
+ // 8 bit group swaps
+ x = (((x & 0xff00ff00) >> 8) | ((x & 0x00ff00ff) << 8));
+
+ // 16 bit group swaps
+ x = (((x & 0xffff0000) >> 16) | ((x & 0x0000ffff) << 16));
+
+ return x;
+
+}
+
+
+// lookup table method
+// need to make a look up table to simply map values
 
 
 int main()

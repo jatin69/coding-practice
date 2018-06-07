@@ -6,6 +6,7 @@
  * Compiler : g++ 5.1.0
  * flags    : -std=c++11
  *
+ * approach : simply xor and count bits by brian kernighan's method.
  */
 
 

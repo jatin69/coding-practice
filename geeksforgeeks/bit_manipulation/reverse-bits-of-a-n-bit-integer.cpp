@@ -72,7 +72,6 @@ unsigned int nBitReverseBits(unsigned int n)
     return rev;
 }
 
-
 int main()
 {
     unsigned int x = 10;

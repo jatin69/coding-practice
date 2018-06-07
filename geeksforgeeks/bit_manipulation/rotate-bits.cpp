@@ -35,7 +35,7 @@ int main(){
 	// rotate left by 1
 	cout<< rotl32b(n,1) << "\n";
 	
-	// rotate left by 1
+	// rotate right by 1
 	cout<< rotr32b(n,1) << "\n";
 
 	cout<<"\n";
@@ -44,7 +44,7 @@ int main(){
 	// rotate left by 1
 	cout<< rotl32b(n,1) << "\n";
 
-	// rotate left by 1
+	// rotate right by 1
 	cout<< rotr32b(n,1) << "\n";
 
 	/*
