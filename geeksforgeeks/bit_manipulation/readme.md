@@ -13,6 +13,7 @@
 * [x] [solution](single-occurence-in-swarm-of-2.cpp) Given an array of N integers, every element appears twice except for one. Find that single one. - O(N)
 * [ ] [solution](single-occurence-in-swarm-of-3.cpp) Given an array of N integers, every element appears thrice except for one. Find that single one. - O(N)
 * [ ] [solution](divide-two-integers-without-using-multiplication-division-mod-operator.cpp) Given a two integers say a and b. Find the quotient after dividing a by b without using multiplication, division and mod operator. O(log a)
+* [ ] [solution](different-bits-sum-pairwise.cpp) Given an integer array of n integers, find sum of bit differences in all pairs that can be formed from array elements. Bit difference of a pair (x, y) is count of different bits at same positions in binary representations of x and y.
 
 ## Editorials
 
