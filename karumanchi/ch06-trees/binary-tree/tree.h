@@ -167,3 +167,9 @@ int test() {
 bool isLeaf(Node* root){
 	return root->left==nullptr && root->right==nullptr;
 }
+
+void visit(Node* r){
+	cout << r->data << "  ";
+}
+
+

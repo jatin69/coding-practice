@@ -3,8 +3,8 @@
 - Try to implement iterative solutions as well
 
 Traversals
-- [ ] DFS - Inorder, Preorder, Postorder - Recursive & Iterative
-- [ ] BFS - Level Order Traversal, Level Order in Reverse
+- [X] DFS - Inorder, Preorder, Postorder - Recursive & Iterative
+- [X] BFS - Level Order Traversal, Level Order in Reverse
 
 Construct Tree from given traversals
 - [ ] inorder-preorder-to-tree
