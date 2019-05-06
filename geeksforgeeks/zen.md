@@ -1,4 +1,5 @@
-# Note 
+# Zen
+
 Basic does not mean "simple".
 Basic means it is a basic algorithm / clear approach, all you need is just to apply it.
 

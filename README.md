@@ -2,7 +2,7 @@
 
 - Coding practice and Revision of DS / Algo
 
-### References
+## References
 
 - Data structures by Mark Allen Weiss
 - GeeksforGeeks
@@ -14,7 +14,7 @@
 - CtCi
 - [more resources here](./resources.md)
 
-### coding styles
+## Coding Style
 
 In this repo, formatting is based on chromium with a few customs on top, as seen in this [clang file](./.clang-format).
 
