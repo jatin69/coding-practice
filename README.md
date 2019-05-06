@@ -1,20 +1,22 @@
 # Coding practice
 
-- Coding practice and Revision of DS / Algo 
+- Coding practice and Revision of DS / Algo
 
 ### References
-- Tutorial point cplusplus
+
 - Data structures by Mark Allen Weiss
+- GeeksforGeeks
+- codechef
 - hackerrank
 - hackerearth
-- codechef
-- GeeksforGeeks
-- Interviewbit
 - leetcode
+- Interviewbit
 - CtCi
-
+- [more resources here](./resources.md)
 
 ### coding styles
+
+In this repo, formatting is based on chromium with a few customs on top, as seen in this [clang file](./.clang-format).
 
 - For Coding standard, refer [this resource](https://gist.github.com/lefticus/10191322).
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)

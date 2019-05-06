@@ -9,41 +9,38 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-
+int main() {
 	int t, ditemp, pitemp, deadi, reqi;
-	cin>>t;
-	while(t--) {
-		
+	cin >> t;
+	while (t--) {
 		int cummSum[32]{0};
 		int D;
-		cin>>D;
-		while(D--){
+		cin >> D;
+		while (D--) {
 			cin >> ditemp >> pitemp;
 			cummSum[ditemp] = pitemp;
 		}
-		
-		for(int i=1;i<=31;++i){
-			cummSum[i] = cummSum[i] + cummSum[i-1];
+
+		for (int i = 1; i <= 31; ++i) {
+			cummSum[i] = cummSum[i] + cummSum[i - 1];
 		}
 
 		int Q;
-		cin>>Q;
-		while(Q--){
+		cin >> Q;
+		while (Q--) {
 			cin >> deadi >> reqi;
-			if( cummSum[deadi] >= reqi ){
-				cout << "Go Camp" << "\n";
-			}
-			else{
-				cout << "Go Sleep" << "\n";
+			if (cummSum[deadi] >= reqi) {
+				cout << "Go Camp"
+					 << "\n";
+			} else {
+				cout << "Go Sleep"
+					 << "\n";
 			}
 		}
-		
 	}
 
-    return 0;
+	return 0;
 }
-

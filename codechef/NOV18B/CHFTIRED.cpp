@@ -9,23 +9,20 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 
 
-int main(){
-
+int main() {
 	int t;
 	cin >> t;
-	while(t--){
-
+	while (t--) {
 		int a, b;
-		cin>>a>>b;
+		cin >> a >> b;
 		cout << "YES";
 		cout << "\n";
 	}
 
-    return 0;
+	return 0;
 }
-

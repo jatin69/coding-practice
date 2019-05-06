@@ -9,34 +9,31 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-
+int main() {
 	int t;
 	cin >> t;
-	while(t--){
+	while (t--) {
 		int n;
-		cin>>n;
-		long long int y =  1L << n;
-		
+		cin >> n;
+		long long int y = 1L << n;
+
 		bool right = true;
 		int ans = 0;
-		
-		while(n--){
-			if(right){
-				ans = (ans*2) + 1;
-			}
-			else{
-				ans = (ans*2) -1;
+
+		while (n--) {
+			if (right) {
+				ans = (ans * 2) + 1;
+			} else {
+				ans = (ans * 2) - 1;
 			}
 			right = !right;
 		}
-		
-		cout << ans << " " <<  y << " ";
+
+		cout << ans << " " << y << " ";
 	}
 
-    return 0;
+	return 0;
 }
-

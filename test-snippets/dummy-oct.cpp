@@ -9,34 +9,34 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-#define HELLO(x) cout << x ;
+#define HELLO(x) cout << x;
 
-int main()
-{
-	HELLO ("ok");
+int main() {
+	HELLO("ok");
 	return 0;
 }
 
 //
-//void getMeanStd(std::vector<float> &values, double &mean, double &stddev)
+// void getMeanStd(std::vector<float> &values, double &mean, double &stddev)
 //{
 //  // throw an exception when the input array is empty
 //  if(values.size() == 0 )
 //  {
 //    throw std::length_error("Error : Input array must have at least 1 element.");
 //  }
-//  
-//  // when the array has only one element, mean is the number itself and standard dev is 0
+//
+//  // when the array has only one element, mean is the number itself and standard dev is
+//  0
 //  if(values.size() == 1)
 //  {
 //	mean = static_cast<double>(values.at(0));
 //	stddev = 0;
 //	return;
 //  }
-//  
+//
 //
 //  double sum = 0, sq_sum = 0;
 //
@@ -46,21 +46,21 @@ int main()
 //    sq_sum += values[i] * values[i];
 //  }
 //  mean = sum / static_cast<double>(values.size ());
-//  double variance = (sq_sum - sum * sum / static_cast<double>(values.size ())) / (static_cast<double>(values.size ()) - 1);
+//  double variance = (sq_sum - sum * sum / static_cast<double>(values.size ())) /
+//  (static_cast<double>(values.size ()) - 1);
 //  stddev = sqrt (variance);
-//  
+//
 //}
 //
 //
-//int main(){
+// int main(){
 //
 //
 //	vector<float> A = {1.1  } ;
-//	
+//
 //	double mean = -1;
 //	double stddev = -1;
 //	getMeanStd(A, mean, stddev);
 // cout << "mean : " << mean <<",  "<< stddev;
 //    return 0;
 //}
-

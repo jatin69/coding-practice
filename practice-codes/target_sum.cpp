@@ -19,45 +19,41 @@
  */
 
 
-#include<iostream>
-#include<map>
+#include <iostream>
+#include <map>
 using namespace std;
 
-int main(){
+int main() {
+	int SIZE = 15;
+	int a[SIZE] = {1, 2, 4, 5, 6, 7, 8, 10, 14, 11, 3, 11, 65, 9, 17};
 
-    int SIZE=15;
-    int a[SIZE]={1,2,4,5,6,7,8,10,14,11,3,11,65,9,17};
+	int target = 11;
+	int n1, n2;
+	bool flag = false;
 
-    int target=11;
-    int n1,n2;
-    bool flag=false;
-    
-	map<int, int>partner;
+	map<int, int> partner;
 	map<int, int>::iterator it;
 
-    for(int i=0; i<SIZE; ++i ){
-        int iPair= target-i;
-        it=partner.find(iPair);
-        if(it!= partner.end()){
-            n1=i;
-            //n1=it->first;
-            n2=iPair;
-            //n2=it->second;
-            flag=true;
-            break;
-        }
-        else{
-            partner.insert(std::make_pair<int,int>(i,i));
-        }
-    }
-	
-	if(flag){
-	    cout<<"Pair is : "<<n1<<" and "<<n2;
-    }
-    else{
-        cout<<"No pair exists.";
-    }
+	for (int i = 0; i < SIZE; ++i) {
+		int iPair = target - i;
+		it = partner.find(iPair);
+		if (it != partner.end()) {
+			n1 = i;
+			// n1=it->first;
+			n2 = iPair;
+			// n2=it->second;
+			flag = true;
+			break;
+		} else {
+			partner.insert(std::make_pair<int, int>(i, i));
+		}
+	}
 
-    return 0;
+	if (flag) {
+		cout << "Pair is : " << n1 << " and " << n2;
+	} else {
+		cout << "No pair exists.";
+	}
+
+	return 0;
 }
-

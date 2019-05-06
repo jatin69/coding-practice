@@ -10,21 +10,20 @@
  */
 
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
-
-	int t,n,s,x,a,b;;
-	cin>>t;
-	while(t--){
-		cin>>n>>x>>s;
-		while(s--){
-			cin>>a>>b;
-			x = (x==a?b:x==b?a:x);
+int main() {
+	int t, n, s, x, a, b;
+	;
+	cin >> t;
+	while (t--) {
+		cin >> n >> x >> s;
+		while (s--) {
+			cin >> a >> b;
+			x = (x == a ? b : x == b ? a : x);
 		}
 		cout << x << "\n";
 	}
-    return 0;
+	return 0;
 }
-

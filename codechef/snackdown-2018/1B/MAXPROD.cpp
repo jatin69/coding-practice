@@ -9,71 +9,60 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define MODVALUE 1000000007
 typedef long long int lli;
 
 int main() {
-    
 	int t;
 	cin >> t;
-	
-    while(t--){
-		
-		lli n,k;
-	    cin>>n>>k;
 
-        lli midsum = k * (k + 1) / 2;
-        if(n < midsum){
-            cout << "-1";
-        }
-        else if(n == midsum){
-        	cout << "0";
-        }
-        else{
+	while (t--) {
+		lli n, k;
+		cin >> n >> k;
 
-            lli initialSum = 1;
-            lli tempSum = n - midsum;
+		lli midsum = k * (k + 1) / 2;
+		if (n < midsum) {
+			cout << "-1";
+		} else if (n == midsum) {
+			cout << "0";
+		} else {
+			lli initialSum = 1;
+			lli tempSum = n - midsum;
 
-            initialSum += (tempSum / k);
-            if(initialSum != 1){
-
-            	lli extraSum = tempSum % k;
+			initialSum += (tempSum / k);
+			if (initialSum != 1) {
+				lli extraSum = tempSum % k;
 				lli res = 1;
-	            
-	            lli arr[k];
-	            
-	            int i = k-1;
-	            while(extraSum){
-	            	arr[i] = initialSum + i + 1;
-	            	extraSum--;
 
-	            	i--;
-	            }
+				lli arr[k];
 
-	            while(i>=0){
-	                arr[i] = initialSum + i;
-	            	i--;
-	            }
-	       
-	            for(int i = 0; i < k; i++){
-	                res *= (arr[i] * (arr[i] - 1)) % MODVALUE ;
-	                res %= MODVALUE;
-	            }
-	            
-	            cout << res;
-            }
-            else{
-                cout << "0";
-            }
-           
+				int i = k - 1;
+				while (extraSum) {
+					arr[i] = initialSum + i + 1;
+					extraSum--;
 
+					i--;
+				}
 
-         }
-        cout << "\n";
-    }
-    return 0;
+				while (i >= 0) {
+					arr[i] = initialSum + i;
+					i--;
+				}
+
+				for (int i = 0; i < k; i++) {
+					res *= (arr[i] * (arr[i] - 1)) % MODVALUE;
+					res %= MODVALUE;
+				}
+
+				cout << res;
+			} else {
+				cout << "0";
+			}
+		}
+		cout << "\n";
+	}
+	return 0;
 }
-

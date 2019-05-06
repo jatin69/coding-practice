@@ -1,6 +1,6 @@
-#include<iostream>
-#include<stdio.h>
-#include<string.h>
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
 using namespace std;
 /*
 @author - BHAGESH DHANKHER
@@ -12,39 +12,35 @@ Approach  :
 2. Using comparission
 */
 
-int main( )
-{
-    char str1[80], str2[80];
-	
-    cout<<"Enter first string: ";
-    cin.getline(str1, 80);
-	
-    cout<<"Enter string to be searched: ";
-    cin.getline(str2, 80);
+int main() {
+	char str1[80], str2[80];
 
-    int l = 0; 
-    
+	cout << "Enter first string: ";
+	cin.getline(str1, 80);
 
-    for(l = 0; str2[l] != '\0'; l++);
+	cout << "Enter string to be searched: ";
+	cin.getline(str2, 80);
 
-    int i, j;
-    
-    for(i = 0, j = 0; str1[i] != '\0' && str2[j] != '\0'; i++)
-    {
-        if(str1[i] == str2[j])
-        {
-            j++;
-        }
-        else
-        {
-            j = 0;
-        }
-    }
+	int l = 0;
 
-    if(j == l)
-        cout<<"Substring found ";
-    else
-        cout<<"Substring not found";
-	
-    return 0;
+
+	for (l = 0; str2[l] != '\0'; l++)
+		;
+
+	int i, j;
+
+	for (i = 0, j = 0; str1[i] != '\0' && str2[j] != '\0'; i++) {
+		if (str1[i] == str2[j]) {
+			j++;
+		} else {
+			j = 0;
+		}
+	}
+
+	if (j == l)
+		cout << "Substring found ";
+	else
+		cout << "Substring not found";
+
+	return 0;
 }

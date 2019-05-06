@@ -9,43 +9,41 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-
+int main() {
 	int t;
-	cin>>t;
+	cin >> t;
 	char A[3][3];
-	bool found ;
-	while(t--){
+	bool found;
+	while (t--) {
 		found = false;
-		
-		for(int i=0;i<3;++i){
-			for(int j=0;j<3;++j){
+
+		for (int i = 0; i < 3; ++i) {
+			for (int j = 0; j < 3; ++j) {
 				cin >> A[i][j];
 			}
 		}
-		for(int i=0;i<2;++i){
-			for(int j=0;j<2;++j){
-				if(A[i][j]=='l'){
-					if(A[i+1][j]=='l' && A[i+1][j+1]=='l'){
+		for (int i = 0; i < 2; ++i) {
+			for (int j = 0; j < 2; ++j) {
+				if (A[i][j] == 'l') {
+					if (A[i + 1][j] == 'l' && A[i + 1][j + 1] == 'l') {
 						found = true;
 						break;
 					}
 				}
 			}
-			if(found) break;
+			if (found)
+				break;
 		}
-		
-		if(found){
+
+		if (found) {
 			cout << "yes\n";
-		}
-		else{
+		} else {
 			cout << "no\n";
 		}
 	}
 
-    return 0;
+	return 0;
 }
-

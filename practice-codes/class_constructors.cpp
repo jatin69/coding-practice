@@ -8,33 +8,23 @@
  */
 
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class A{
-    public:
-    A(){
-        cout<<"make A\n";
-    }
-    ~A(){
-        cout<<"destroy A\n";
-    }
+class A {
+public:
+	A() { cout << "make A\n"; }
+	~A() { cout << "destroy A\n"; }
 };
 
-class B: public A{
-    public:
-    B(){
-        cout<<"make B\n";
-    }
-    ~B(){
-        cout<<"destroy B\n";
-    }
+class B : public A {
+public:
+	B() { cout << "make B\n"; }
+	~B() { cout << "destroy B\n"; }
 };
 
-int main(){
+int main() {
+	B b;
 
-    B b;
-
-    return 0;
+	return 0;
 }
-

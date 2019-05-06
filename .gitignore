@@ -46,3 +46,6 @@ nbdist/
 *.xml
 *.properties
 *.mf
+
+# my
+.vscode

@@ -9,14 +9,12 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-
+int main() {
 	int x_12 = 4 ^ 10 ^ 11;
 	cout << x_12;
 
-    return 0;
+	return 0;
 }
-

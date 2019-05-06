@@ -8,21 +8,19 @@
  */
 
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
+int main() {
+	int q = 100;
+	int* p = &q;
+	// decrement the value
+	cout << --(*p);
 
-	int q=100;
-	int *p=&q;
-    // decrement the value
-    cout<< --(*p);
-    
-    cout<<"\n";
-    // decrement the pointer
-    cout<< *(--p);       // garbage answer
+	cout << "\n";
+	// decrement the pointer
+	cout << *(--p);  // garbage answer
 
-	
-    return 0;
+
+	return 0;
 }
-

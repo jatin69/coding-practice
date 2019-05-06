@@ -6,7 +6,7 @@ int main() {
 	int n, q, k, num, count, maxCount;
 	string s;
 	cin >> n >> q >> k;
-	vector <int> sequence;
+	vector<int> sequence;
 	for (int i = 0; i < n; i++) {
 		cin >> num;
 		sequence.push_back(num);
@@ -21,33 +21,34 @@ int main() {
 		if (s[i] == '!') {
 			start = (start + 1) % size;
 			end = (end + 1) % size;
-		}
-		else {
+		} else {
 			count = 0;
 			maxCount = 0;
 			int j;
 			for (j = start; j != end; j = (j + 1) % size) {
 				if (sequence[j] == 1) {
 					count++;
-				}
-				else {
+				} else {
 					if (count >= maxCount) {
-						cout << "\nMax count found at  i : " << (count-j + size)%size << " and j : " << j-1 << "\n";
+						cout << "\nMax count found at  i : " << (count - j + size) % size
+							 << " and j : " << j - 1 << "\n";
 						maxCount = count;
 					}
 					count = 0;
 				}
 			}
-			if ( sequence[j] == 1) {
+			if (sequence[j] == 1) {
 				count++;
-				cout << "\nMax count found at  i : " << (count-j + size)%size << " and j : " << j-1 << "\n";
+				cout << "\nMax count found at  i : " << (count - j + size) % size
+					 << " and j : " << j - 1 << "\n";
 			}
-			
-			
-			
+
+
+
 			if (count >= maxCount) {
 				maxCount = count;
-				cout << "\nMax count found at  i : " << (count-j + size)%size << " and j : " << j-1 << "\n";
+				cout << "\nMax count found at  i : " << (count - j + size) % size
+					 << " and j : " << j - 1 << "\n";
 			}
 			if (maxCount >= k) {
 				maxCount = k;
@@ -57,4 +58,3 @@ int main() {
 	}
 	return 0;
 }
-

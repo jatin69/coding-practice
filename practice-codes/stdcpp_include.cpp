@@ -8,14 +8,12 @@
  */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main() {
+	cout << "Hello World\n";
+	cout << "This program uses the Non standard bits/stdc++.h ";
 
-	cout<<"Hello World\n";
-	cout<<"This program uses the Non standard bits/stdc++.h ";
-
-    return 0;
+	return 0;
 }
-
