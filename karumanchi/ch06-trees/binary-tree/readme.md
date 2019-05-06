@@ -1,35 +1,40 @@
+> > working-file >> level-order-variations
+
 # Binary Trees
 
 - Try to implement iterative solutions as well
 
 Traversals
-- [X] DFS - Inorder, Preorder, Postorder - Recursive & Iterative
-- [X] BFS - Level Order Traversal, Level Order in Reverse
+
+- [x] DFS - Inorder, Preorder, Postorder - Recursive & Iterative
+- [x] BFS - Level Order Traversal, Level Order in Reverse
 
 Construct Tree from given traversals
+
 - [ ] inorder-preorder-to-tree
 - [ ] inorder-postorder-to-tree
 - [ ] inorder-levelorder-to-tree
 
-- [X] Size of a tree
-- [X] Height / Depth - ( both definitions : Node height, Edge Height )
-- [X] Count leaves / Count Full Nodes / Count half-filled Nodes
+- [x] Size of a tree
+- [x] Height / Depth - ( both definitions : Node height, Edge Height )
+- [x] Count leaves / Count Full Nodes / Count half-filled Nodes
 
-- [X] Mirror of a Tree
-- [X] Check if two trees are mirror of each other / Check if two trees are equal
-- [X] Check if Tree is symmetric
+- [x] Mirror of a Tree
+- [x] Check if two trees are mirror of each other / Check if two trees are equal
+- [x] Check if Tree is symmetric
 
-- [X] Insert a Node
-- [X] check if element exists
-- [X] Delete a Node
-- [X] Delete tree
+- [x] Insert a Node
+- [x] check if element exists
+- [x] Delete a Node
+- [x] Delete tree
 
-- [X] Maximum element Node
-- [X] Sum of all elements
+- [x] Maximum element Node
+- [x] Sum of all elements
 
-
-- [ ] Print nodes of a particular level
+- [x] count levels Iterative
+- [x] Print nodes of a particular level - Iterative, Recursive
 - [ ] Print nodes of all levels
+- [ ] Find number of levels
 - [ ] Find level with maximum sum
 - [ ] Spiral BFS
 - [ ] Vertical order/level of Tree
@@ -50,4 +55,3 @@ Construct Tree from given traversals
 - Double the tree
 - All ancestors of a Node
 - Least Common Ancestors ( LCA ) of two nodes
-

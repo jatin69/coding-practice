@@ -35,7 +35,7 @@ void printBinaryTree(Node *root, int COUNT = 1, int space = 0) {
   space += COUNT * 10;
 
   // Process right child first - to show it on top line
-  if (root && (root->left || root->right)) {
+  if (root) {
     printBinaryTree(root->right, COUNT, space);
   }
 
@@ -60,7 +60,7 @@ void printBinaryTree(Node *root, int COUNT = 1, int space = 0) {
   }
 
   // Process left child
-  if (root && (root->left || root->right)) {
+  if (root) {
     printBinaryTree(root->left, COUNT, space);
   }
 }

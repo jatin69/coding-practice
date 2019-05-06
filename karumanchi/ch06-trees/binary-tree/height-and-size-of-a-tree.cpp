@@ -18,6 +18,7 @@ using namespace std;
 
 int sizeOfTree(Node*);
 int heightNode(Node*);
+int heightNodeIterative(Node*);
 int heightEdge(Node*);
 
 int countFullNodes(Node*);
@@ -31,6 +32,8 @@ int main(){
 	cout << "\n\nTree Properties - ( Recursive )\n";
 	cout << "\nSize of Tree                   : " << sizeOfTree(root);
 	cout << "\nHeight of Tree ( Node height ) : " << heightNode(root);
+	cout << "\nHeight of Tree ( Node height ) : " << heightNodeIterative(root);
+	cout << "  (Iterative)";
 	cout << "\nHeight of Tree ( Edge height ) : " << heightEdge(root);
 	cout << "\n";
 	cout << "\nTotal Number of Nodes          : " << sizeOfTree(root);
@@ -98,5 +101,38 @@ int countLeafNodes(Node* root) {
 	return contribution + countLeafNodes(root->left) + countLeafNodes(root->right);
 }
 
-
+// height of Tree - Node height - Iterative Version : finding No of levels
+int heightNodeIterative(Node* root){
+	if(!root) return 0;
+	
+	queue<Node*> Q;
+	Node* nullNode = nullptr;
+	Node* it;
+	int level = 0;
+	
+	Q.push(root);
+	Q.push(nullNode);   // end of first level
+	
+	while(!Q.empty()){
+		it = Q.front();
+		Q.pop();
+		if(it==nullptr){
+			++level;
+			
+			// put another marker for next level
+			if(!Q.empty()){
+				Q.push(nullNode);
+			}
+		}
+		else{
+			if(it->left){
+				Q.push(it->left);
+			}
+			if(it->right){
+				Q.push(it->right);
+			}
+		}
+	}
+	return level;
+}
 
