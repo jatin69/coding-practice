@@ -1,24 +1,20 @@
 /*
  * Author : Jatin Rohilla
- * Date   : 18/06/2018
+ * Date   : 18/06/2018, 4-5-2019
  *
  * Editor   : Dev c++ 5.11
  * Compiler : g++ 5.1.0
  * flags    : -std=c++11
  *
-question - https://www.interviewbit.com/problems/wave-array/
-Given an array of integers, sort the array into a wave like array and return it,
-In other words, arrange the elements into a sequence such that a1 >= a2 <= a3 >= a4 <= a5.....
-
-approach -
-sort and swap alternate
+ * link - https://www.interviewbit.com/problems/wave-array/
+ * approach - sort and swap alternate
  */
 
 
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> wave(vector<int> &A) {
+vector<int> wave_oldsession(vector<int> &A) {
     
     sort(A.begin(),A.end());
     
@@ -37,6 +33,16 @@ vector<int> wave(vector<int> &A) {
     	A[i+1] = t;
 	}
 
+    return A;
+}
+
+vector<int> wave(vector<int> &A) {
+    sort(A.begin(), A.end());
+    for(int i=0; i<A.size(); i=i+2){
+        if(i+1 < A.size()){
+            swap(A[i], A[i+1]);
+        }
+    }
     return A;
 }
 

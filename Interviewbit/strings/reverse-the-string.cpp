@@ -15,18 +15,20 @@ using namespace std;
 
 #include<string>
 
+// leveraging string
 void reverseWords(string &A) {
     string res="";
-    int size=A.length();
-    for(int i=0;i<size;++i){
+    for(int i=0;i<A.length();++i){
 		string word="";
-        while(i<size && A[i]==' '){ i++; }
+        while(i<A.length() && A[i]==' '){ i++; }
 
-        while(i<size && A[i]!=' '){
+		while(i<A.length() && A[i]!=' '){
             word.push_back(A[i]);
             i++;
         }
         i--;
+        
+        // for first time
         if(res==""){
         	res=word;
 		}
@@ -37,7 +39,67 @@ void reverseWords(string &A) {
         
     }
     A = res;
+}
 
+// manually handling a lot of cases
+void reverseWords_new_session(string &A) {
+
+    string res;
+
+    // compaction of spaces
+    for(int i=0; i<A.length(); ++i){
+
+        // keep other chars as it is
+        while(i<A.length() && A[i]!=' '){ res += A[i]; i++; }
+
+        // compact all spaces to one
+        while(i<A.length() && A[i]==' '){ i++; }
+		// changing from " " to "-" for easy view
+		res += ' ';
+
+        i--;
+    }
+	
+	// remove spaces from starting and end
+    int k;
+    for(k=0; k<res.length() && res[k]==' '; ++k);
+    int ws = k;
+    for(k=res.length()-1; k>=0 && res[k]==' '; --k);
+	int len = k-ws+1;
+    A = res.substr(ws, len);
+
+	// in-place reversal of each word
+    for(int i=0; i<A.length(); ++i){
+
+        // make a word
+        int ws = i;
+        while(i<A.length() && A[i]!=' '){ i++; }
+        int we = i-1;
+
+        // reverse the word
+        int p = ws;
+        int q = we;
+        char t;
+        while(p < q){
+            t = A[p];
+            A[p] = A[q];
+            A[q] = t;
+            p++;
+            q--;
+        }
+    }
+
+    // now reverse the entire string
+    int p = 0;
+    int q = A.length()-1;
+    char t;
+    while(p < q){
+        t = A[p];
+        A[p] = A[q];
+        A[q] = t;
+        p++;
+        q--;
+    };
 }
 
 

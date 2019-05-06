@@ -1,10 +1,10 @@
 /*
  * Author : Jatin Rohilla
- * Date   : 10/06/2018
+ * Date   : 10/06/2018, 30-4-2019
  *
  * Editor   : Dev c++ 5.11
  * Compiler : g++ 5.1.0
- * flags    : -std=c++11
+ * flags    : -std=c++14
  *
  * Question : https://www.interviewbit.com/problems/add-one-to-number/
  */
@@ -14,6 +14,31 @@
 using namespace std;
 
 vector<int> plusOne(vector<int> &A) {
+    vector<int> res(A);
+    reverse(res.begin(), res.end());
+
+    // add 1
+    int carry = 1;
+    for(int i=0; i<=A.size()-1; ++i){
+        res[i] += carry;
+        carry = res[i] > 9 ? 1 : 0;
+        res[i] %= 10;
+    }
+    // extra member if needed ?
+    if(carry==1){
+        res.push_back(1);
+    }
+
+    // remove extra 0's
+    for(int i=res.size()-1; i>=0 && res[i]==0; --i){
+        res.pop_back();
+    }
+
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+vector<int> plusOne_oldsession(vector<int> &A) {
 
     A[A.size()-1]++;
     for(int i=A.size()-1;i>=1;i--){
@@ -46,7 +71,7 @@ int main(){
 	vector <int> res = plusOne(A);
 	
 	for(int i=0;i<res.size();++i){
-		cout<<A[i];
+		cout<<res[i];
 	}
 
     return 0;

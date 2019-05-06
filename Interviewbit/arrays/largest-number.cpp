@@ -1,6 +1,6 @@
 /*
  * Author : Jatin Rohilla
- * Date   : 09/06/2018
+ * Date   : 09/06/2018, 5-5-2019
  *
  * Editor   : Dev c++ 5.11
  * Compiler : g++ 5.1.0
@@ -22,12 +22,34 @@ bool compfunction (int m,int n) {
     return strtoll(i.c_str(), &pEnd, 10) > strtoll(j.c_str(), &pEnd, 10);
 }
 
-string largestNumber(const vector<int> &_A) {
+string largestNumber_old(const vector<int> &_A) {
     vector <int> A = _A;
     std::sort(A.begin(),A.end(), compfunction);
     string res = "";
     for(int i=0;i<A.size();++i){
         res.append(std::to_string(A[i]));
+    }
+
+    if(res[0]=='0'){
+        res = '0';
+    }
+
+    return res;
+}
+
+bool comparator(string a, string b){
+    return a+b > b+a;
+}
+
+string largestNumber(const vector<int> &A) {
+    vector<string> nums;
+    for(auto it : A){
+        nums.push_back(to_string(it));
+    }
+    sort(nums.begin(), nums.end(), comparator);
+    string res = "";
+    for(auto it : nums){
+        res += it;
     }
 
     if(res[0]=='0'){
