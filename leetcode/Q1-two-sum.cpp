@@ -20,45 +20,38 @@ But sorting will distort indexes, so can't use
 3. We use unordered_map here. pair of <element, index>
 
 Accepted.
- 
+
 */
 
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> twoSum(vector<int>& A, int target) {
+	unordered_map<int, int> s;
+	unordered_map<int, int>::iterator it;
 
-    unordered_map<int,int> s ;
-    unordered_map<int,int>::iterator it;
+	for (int i = 0; i < A.size(); ++i) {
+		int ele = target - A[i];
+		it = s.find(ele);
+		if (it != s.end()) {
+			int j = it->second;
+			return vector<int>({j, i});
+		}
 
-    for(int i=0;i<A.size();++i){
+		s.insert(make_pair(A[i], i));
+	}
 
-        int ele = target -  A[i];
-        it = s.find(ele);
-        if(it!=s.end()){
-            int j = it->second;
-            return vector<int>({ j, i });
-        }
-
-        s.insert(make_pair(A[i],i));
-
-    }
-
-    return vector<int>();
+	return vector<int>();
 }
 
-int main(){
+int main() {
+	vector<int> A = {3, 2, 4};
 
-	vector<int> A = {
-		3,2,4
-	};
-	
 	int reqSum = 6;
-	
-	vector<int> res = twoSum(A,reqSum);
-	cout << "(" << res[0] << ", " << res[1] << ")" <<endl;
 
-    return 0;
+	vector<int> res = twoSum(A, reqSum);
+	cout << "(" << res[0] << ", " << res[1] << ")" << endl;
+
+	return 0;
 }
-
