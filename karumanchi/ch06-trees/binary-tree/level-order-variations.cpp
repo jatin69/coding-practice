@@ -27,8 +27,8 @@ void printAllLevelsSeparately(Node*);
 int findLevelWithMaxiumumSum(Node*);
 
 void printVerticalLevelsOfTree(Node*);
-int countVerticalLevels(Node*);
-void printVerticalSumofAllLevels(Node*);
+// int countVerticalLevels(Node*);
+// void printVerticalSumofAllLevels(Node*);
 
 int main(){
 
@@ -51,7 +51,14 @@ int main(){
 	cout << "\nPrinting Level "<< level << "    (Iterative)  : " ; printLevel_Iterative(root, level);
 	cout << "\nPrinting all Levels (Iterative)  : " ; printAllLevelsSeparately(root);
 	cout << "\n\nLevel With Max Sum  (Iterative)  : " << findLevelWithMaxiumumSum(root);
-    return 0;
+
+	cout << "\nVertical Level Traversal : ";
+	printVerticalLevelsOfTree(root);
+
+
+	return 0;
+    
+
 }
 
 // normal level order traversal - top to bottom
@@ -300,6 +307,38 @@ int findLevelWithMaxiumumSum(Node* root){
 	}
 	
 	return maxSumLevel;
+}
+
+
+void printVerticalLevelsOfTreeHelper(Node* root, int level, map<int, vector<int>>& m){
+	if(root==nullptr){
+		return;
+	}
+	if(m.find(level)!=m.end()){
+		m[level].push_back(root->data);
+	}
+	else{
+		m[level] = {root->data};
+	}
+	printVerticalLevelsOfTreeHelper(root->left, level-1, m);
+	printVerticalLevelsOfTreeHelper(root->right, level+1, m);
+}
+
+void printVerticalLevelsOfTree(Node* root){
+	map<int, vector<int>> m;
+	printVerticalLevelsOfTreeHelper(root, 0, m);
+	cout << "\nNo of levels : " << m.size() ;
+	for(auto it : m){
+		cout << "\nLevel  : " << it.first << ", ";
+		cout << "Values : ";
+		int sum = 0;
+		for(auto el : it.second){
+			sum += el;
+			cout << el << " ";
+		}
+		cout << ", sum : " << sum;
+	}
+	cout << "\n";
 }
 
 

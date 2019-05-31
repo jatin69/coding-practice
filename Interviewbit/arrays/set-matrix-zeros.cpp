@@ -1,6 +1,6 @@
 /*
  * Author : Jatin Rohilla
- * Date   : 18/06/2018
+ * Date   : 18/06/2018, 25-05-2019
  *
  * Editor   : Dev c++ 5.11
  * Compiler : g++ 5.1.0
@@ -15,22 +15,6 @@ Similar question - https://www.geeksforgeeks.org/a-boolean-matrix-question/
 
 approach -
 
-1. Mark current row and column for later processing
-To mark, push them in separate row & column vectors.
-later process everything.
-Time - O(m*n)
-space - O(m+n)  // exceeds requirement
-
-2.
-Mark current row and column for later processing
-=> can't simply multiply by -ve marking because it will be nullified at intersections
-=> can't use multiply by two or above because it's going out of range
-I need something which makes zero when encountered with zero
-use -1 along with many if conditions. Job done.
-Time -  exceeds requirement
-space - O(1)  
-
-3. Efficient approach
 use two flag variables to store status of 0th row and 0th column.
 Now process matrix (m-1 * n-1) by reusing space of 0th row and 0th column as Aux space
 At last, process 0th row and column using flags.
@@ -39,6 +23,75 @@ At last, process 0th row and column using flags.
 
 #include<bits/stdc++.h>
 using namespace std;
+
+
+void setZeroes_newsession(vector<vector<int> > &A) {
+
+    if(A.size()==0){
+        return ;
+    }
+    int m = A.size();
+    int n = A[0].size();
+
+
+    // preprocess first row and column
+    bool willFirstRowBeZero = false;
+    bool willFirstColumnBeZero = false;
+
+    if(willFirstRowBeZero==false){
+        for(int j=0;j<n;++j){
+            if(A[0][j]==0){
+                willFirstRowBeZero = true;
+                break;
+            }
+        }
+    }
+
+    if(willFirstColumnBeZero==false){
+        for(int i=0;i<m;++i){
+            if(A[i][0]==0){
+                willFirstColumnBeZero = true;
+                break;
+            }
+        }
+    }
+
+    // pre process matrix m-1 x n-1
+    for(int i=1;i<m;++i){
+        for(int j=1;j<n;++j){
+            if(A[i][j]==0){
+                A[0][j] = 0;
+                A[i][0] = 0;
+            }
+        }
+    }
+
+    // process matrix m-1 x n-1
+    for(int i=1;i<m;++i){
+        for(int j=1;j<n;++j){
+            if(A[i][0]==0 || A[0][j]==0){
+                A[i][j] = 0;
+            }
+            else{
+                A[i][j] = 1;
+            }
+        }
+    }
+
+    if(willFirstRowBeZero){
+        for(int j=0;j<n;++j){
+            A[0][j] = 0;
+        }
+    }
+
+    if(willFirstColumnBeZero){
+        for(int i=0;i<m;++i){
+            A[i][0] = 0;
+        }
+    }
+
+}
+
 
 void setZeroes(vector<vector<int> > &A) {
 
