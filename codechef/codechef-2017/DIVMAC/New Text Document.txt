@@ -1,0 +1,6 @@
+To minimise execution :
+
+1. use scanf
+2. use array if possible instead of vectors
+
+minimise loops
